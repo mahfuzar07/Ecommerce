@@ -1,9 +1,7 @@
+import Home from './pages/Home';
+
 function App() {
-  return (
-    <div className="App">
-      <h1>My First React Project</h1>
-    </div>
-  );
+  return <Home></Home>;
 }
 
 export default App;
