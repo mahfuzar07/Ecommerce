@@ -9,12 +9,12 @@ function App() {
   return (
     <div>
       <Cart />
-      {/* <Home />
+      <Home />
 
       <Product />
       <ProductList />
       <Register />
-      <Login /> */}
+      <Login />
     </div>
   );
 }
