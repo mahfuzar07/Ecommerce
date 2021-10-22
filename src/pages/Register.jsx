@@ -2,6 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 import Checkbox from '@mui/material/Checkbox';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   width: 100vw;
@@ -19,6 +20,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 40%;
   padding: 20px;
+  ${mobile({ width: '98%' })}
 `;
 const Title = styled.h1`
   font-size: 30px;
@@ -26,6 +28,7 @@ const Title = styled.h1`
   text-align: center;
   margin-bottom: 80px;
   color: #223f33;
+  ${mobile({ marginBottom: '60px' })}
 `;
 const Form = styled.form`
   display: flex;
@@ -53,6 +56,7 @@ const Button = styled.button`
   cursor: pointer;
   border-radius: 20px;
   margin-bottom: 10px;
+  ${mobile({ width: '40%' })}
 `;
 
 function Register() {
@@ -63,6 +67,7 @@ function Register() {
         <Form>
           <Input placeholder="First Name" />
           <Input placeholder="Last Name" />
+          <Input placeholder="User Name" />
           <Input placeholder="Email Address" />
           <Input placeholder="Password" />
           <Input placeholder="Confirm Password" />
