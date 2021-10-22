@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   width: 100vw;
@@ -20,6 +21,9 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 25%;
   padding: 20px;
+  ${mobile({
+    width: '75%',
+  })}
 `;
 const Title = styled.h1`
   font-size: 30px;
@@ -67,7 +71,7 @@ function Login() {
       <Wrapper>
         <Title>Login Your Account </Title>
         <Form>
-          <Input placeholder="Email Address " />
+          <Input placeholder="User Name " />
           <Input placeholder="Password" />
           <Button>Login</Button>
 
