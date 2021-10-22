@@ -43,7 +43,7 @@ const Input = styled.input`
   border: none;
   outline: none;
   ${mobile({
-    width: '50px',
+    width: '40px',
   })}
 `;
 const Center = styled.div`
@@ -54,7 +54,7 @@ const Logo = styled.h1`
   text-transform: uppercase;
   font-weight: bold;
   ${mobile({
-    fontSize: '16px',
+    fontSize: '14px',
   })}
 `;
 const Right = styled.div`
@@ -73,7 +73,7 @@ const MenuItem = styled.div`
   margin-left: 25px;
   ${mobile({
     fontSize: '12px',
-    marginleft: '10px',
+    marginleft: '10px ',
   })}
 `;
 
@@ -94,7 +94,7 @@ function Navbar() {
         <Right>
           <MenuItem>Register</MenuItem>
           <MenuItem>Sign-In</MenuItem>
-          <MenuItem>
+          <MenuItem style={{ marginRight: '25px' }}>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartIcon />
             </Badge>

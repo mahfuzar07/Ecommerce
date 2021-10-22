@@ -19,8 +19,8 @@ const ImageContainer = styled.div`
 `;
 const Image = styled.img`
   width: 100%;
-  height: 80vh;
-  object-fit: cover;
+  height: 85vh;
+  /* object-fit: cover; */
   ${mobile({ height: '60vh' })}
 `;
 const InfoContainer = styled.div`
@@ -108,7 +108,7 @@ function Product() {
 
       <Wrapper>
         <ImageContainer>
-          <Image src="https://cdn-magento2-media.head.com/wysiwyg/Gravity_Pull_Carousel_IGcoreFr-1.jpg"></Image>
+          <Image src="https://assets.ajio.com/medias/sys_master/root/20210801/WP0B/61062bf7aeb269a9e35be547/aks_blue_printed_sleeveless_fit_&_flare_dress.jpg"></Image>
         </ImageContainer>
         <InfoContainer>
           <Title>Dress</Title>

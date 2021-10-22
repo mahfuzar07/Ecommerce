@@ -34,11 +34,12 @@ const Container = styled.div`
 `;
 
 const Image = styled.img`
-  height: 95%;
-  width: 95%;
-  object-fit: cover;
+  height: 98%;
+  width: 98%;
+  /* object-fit: cover; */
+
   border-radius: 10px;
-  z-index: 2;
+  /* z-index: 2; */
 `;
 
 const Icon = styled.div`

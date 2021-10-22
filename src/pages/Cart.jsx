@@ -11,8 +11,8 @@ import Badge from '@mui/material/Badge';
 import { mobile } from '../responsive';
 
 const Container = styled.div`
-  width: 100%;
-  height: 100vh;
+  /* width: 100%;
+  height: 100vh; */
 `;
 const Wrapper = styled.div`
   padding: 20px;
@@ -201,59 +201,6 @@ function Cart() {
               </PriceDetails>
             </Product>
             <Hr />
-            <Product>
-              <ProductDetails>
-                <Image src="https://cdn.shopify.com/s/files/1/0011/9783/4252/products/20_375a8763-f5d7-4184-a352-4523ef713733_900x.jpg?v=1576267132" />
-                <Details>
-                  <ProductName>
-                    <b>Product : </b> Dress
-                  </ProductName>
-                  <ProductId>
-                    <b>Id : </b> SKl-14562
-                  </ProductId>
-
-                  <ProductSize>
-                    <b>Size : </b> S
-                  </ProductSize>
-                  <ProductColor color="black" />
-                </Details>
-              </ProductDetails>
-              <PriceDetails>
-                <ProductAmountContainer>
-                  <RemoveIcon />
-                  <Amount>1</Amount>
-                  <AddIcon />
-                </ProductAmountContainer>
-                <ProductPrice>$125</ProductPrice>
-              </PriceDetails>
-            </Product>
-            <Hr />
-            <Product>
-              <ProductDetails>
-                <Image src="https://cdn.shopify.com/s/files/1/0011/9783/4252/products/20_375a8763-f5d7-4184-a352-4523ef713733_900x.jpg?v=1576267132" />
-                <Details>
-                  <ProductName>
-                    <b>Product : </b> Dress
-                  </ProductName>
-                  <ProductId>
-                    <b>Id : </b> SKl-14562
-                  </ProductId>
-
-                  <ProductSize>
-                    <b>Size : </b> S
-                  </ProductSize>
-                  <ProductColor color="black" />
-                </Details>
-              </ProductDetails>
-              <PriceDetails>
-                <ProductAmountContainer>
-                  <RemoveIcon />
-                  <Amount>1</Amount>
-                  <AddIcon />
-                </ProductAmountContainer>
-                <ProductPrice>$125</ProductPrice>
-              </PriceDetails>
-            </Product>
           </Info>
           <Summary>
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
@@ -278,6 +225,7 @@ function Cart() {
           </Summary>
         </Bottom>
       </Wrapper>
+
       <Footer />
     </Container>
   );
