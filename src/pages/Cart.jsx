@@ -5,6 +5,10 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import Badge from '@mui/material/Badge';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   width: 100%;
@@ -12,6 +16,7 @@ const Container = styled.div`
 `;
 const Wrapper = styled.div`
   padding: 20px;
+  ${mobile({ padding: '10px' })}
 `;
 const Title = styled.h1`
   font-weight: 300;
@@ -23,9 +28,11 @@ const Top = styled.div`
   justify-content: space-between;
   padding: 20px;
 `;
-const TopTexts = styled.div``;
+const TopTexts = styled.div`
+  ${mobile({ display: 'none' })}
+`;
 const TopText = styled.span`
-  text-decoration: underline;
+  color: #507777;
   cursor: pointer;
   margin: 0px 10px;
 `;
@@ -43,6 +50,7 @@ const TopButton = styled.button`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ flexDirection: 'column' })}
 `;
 const Info = styled.div`
   flex: 3;
@@ -50,6 +58,7 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ flexDirection: 'column' })}
 `;
 const ProductDetails = styled.div`
   flex: 2;
@@ -96,10 +105,12 @@ const Amount = styled.span`
   align-items: center;
   justify-content: center;
   margin: 0px 5px;
+  ${mobile({ margin: '5px 15px' })}
 `;
 const ProductPrice = styled.div`
   font-size: 24px;
   font-weight: 300;
+  ${mobile({ marginBottom: '20px' })}
 `;
 const Summary = styled.div`
   flex: 1;
@@ -146,8 +157,18 @@ function Cart() {
         <Top>
           <TopButton>CONTINUE SHOPPING</TopButton>
           <TopTexts>
-            <TopText>Shopping Bag (0)</TopText>
-            <TopText>Your wishlist (0)</TopText>
+            <TopText>
+              Shopping Bag
+              <Badge badgeContent={1} color="secondary">
+                <ShoppingBagIcon />
+              </Badge>
+            </TopText>
+            <TopText>
+              Your wishlist
+              <Badge badgeContent={1} color="secondary">
+                <FavoriteIcon />
+              </Badge>
+            </TopText>
           </TopTexts>
           <TopButton type="filled">CHECKOUT NOW</TopButton>
         </Top>
@@ -180,6 +201,59 @@ function Cart() {
               </PriceDetails>
             </Product>
             <Hr />
+            <Product>
+              <ProductDetails>
+                <Image src="https://cdn.shopify.com/s/files/1/0011/9783/4252/products/20_375a8763-f5d7-4184-a352-4523ef713733_900x.jpg?v=1576267132" />
+                <Details>
+                  <ProductName>
+                    <b>Product : </b> Dress
+                  </ProductName>
+                  <ProductId>
+                    <b>Id : </b> SKl-14562
+                  </ProductId>
+
+                  <ProductSize>
+                    <b>Size : </b> S
+                  </ProductSize>
+                  <ProductColor color="black" />
+                </Details>
+              </ProductDetails>
+              <PriceDetails>
+                <ProductAmountContainer>
+                  <RemoveIcon />
+                  <Amount>1</Amount>
+                  <AddIcon />
+                </ProductAmountContainer>
+                <ProductPrice>$125</ProductPrice>
+              </PriceDetails>
+            </Product>
+            <Hr />
+            <Product>
+              <ProductDetails>
+                <Image src="https://cdn.shopify.com/s/files/1/0011/9783/4252/products/20_375a8763-f5d7-4184-a352-4523ef713733_900x.jpg?v=1576267132" />
+                <Details>
+                  <ProductName>
+                    <b>Product : </b> Dress
+                  </ProductName>
+                  <ProductId>
+                    <b>Id : </b> SKl-14562
+                  </ProductId>
+
+                  <ProductSize>
+                    <b>Size : </b> S
+                  </ProductSize>
+                  <ProductColor color="black" />
+                </Details>
+              </ProductDetails>
+              <PriceDetails>
+                <ProductAmountContainer>
+                  <RemoveIcon />
+                  <Amount>1</Amount>
+                  <AddIcon />
+                </ProductAmountContainer>
+                <ProductPrice>$125</ProductPrice>
+              </PriceDetails>
+            </Product>
           </Info>
           <Summary>
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
