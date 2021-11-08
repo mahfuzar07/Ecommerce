@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import { mobile } from '../responsive';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   width: 100vw;
@@ -44,9 +45,12 @@ const Input = styled.input`
   background: transparent;
   border: 1px solid teal;
   border-radius: 10px;
+  &:focus {
+    outline: none;
+  }
 `;
 
-const Link = styled.a`
+const Linka = styled.a`
   font-size: 14px;
   margin: 5px 0px;
   display: flex;
@@ -75,13 +79,15 @@ function Login() {
           <Input placeholder="Password" />
           <Button>Login</Button>
 
-          <Link>
+          <Linka>
             <VpnKeyIcon style={{ marginRight: '5px' }} />
             FORGOTTEN PASSWORD
-          </Link>
-          <Link>
-            <AccountBoxIcon style={{ marginRight: '5px' }} />
-            CREATE ACCOUNT
+          </Linka>
+          <Link className="rlink" to="register">
+            <Linka>
+              <AccountBoxIcon style={{ marginRight: '5px' }} />
+              CREATE ACCOUNT
+            </Linka>
           </Link>
         </Form>
       </Wrapper>

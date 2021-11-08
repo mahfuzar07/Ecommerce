@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import { Link } from 'react-router-dom';
 
 const Info = styled.div`
   width: 100%;
@@ -62,17 +63,22 @@ function Product({ item }) {
   return (
     <Container>
       <Image src={item.img} />
-      <Info>
-        <Icon>
-          <AddShoppingCartOutlinedIcon />
-        </Icon>
-        <Icon>
-          <SearchOutlinedIcon />
-        </Icon>
-        <Icon>
-          <FavoriteBorderOutlinedIcon />
-        </Icon>
-      </Info>
+      <Link className="rlink" to="/product">
+        <Info>
+          <Link className="rlink" to="/product">
+            <Icon>
+              <SearchOutlinedIcon />
+            </Icon>
+          </Link>
+          <Icon>
+            <AddShoppingCartOutlinedIcon />
+          </Icon>
+
+          <Icon>
+            <FavoriteBorderOutlinedIcon />
+          </Icon>
+        </Info>
+      </Link>
     </Container>
   );
 }

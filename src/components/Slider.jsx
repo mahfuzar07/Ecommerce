@@ -5,6 +5,7 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { slideItems } from '../data';
 import { useState } from 'react';
 import { mobile } from '../responsive';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   width: 100%;
@@ -102,7 +103,9 @@ function Slider() {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>Shop Now</Button>
+              <Link to="/productlist">
+                <Button>Shop Now</Button>
+              </Link>
             </InfoContainer>
           </Slide>
         ))}

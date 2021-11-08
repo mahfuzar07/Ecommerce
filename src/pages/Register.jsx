@@ -2,7 +2,9 @@ import React from 'react';
 
 import styled from 'styled-components';
 import Checkbox from '@mui/material/Checkbox';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import { mobile } from '../responsive';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   width: 100vw;
@@ -42,13 +44,16 @@ const Input = styled.input`
   background: transparent;
   border: 1px solid teal;
   border-radius: 10px;
+  &:focus {
+    outline: none;
+  }
 `;
 const Agreement = styled.span`
   font-size: 12px;
   margin: 20px 0px;
 `;
 const Button = styled.button`
-  width: 40%;
+  width: 100%;
   border: none;
   padding: 15px 20px;
   background: teal;
@@ -56,7 +61,17 @@ const Button = styled.button`
   cursor: pointer;
   border-radius: 20px;
   margin-bottom: 10px;
+
   ${mobile({ width: '40%' })}
+`;
+const Linka = styled.a`
+  font-size: 14px;
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #3a5050;
 `;
 
 function Register() {
@@ -78,6 +93,12 @@ function Register() {
           </Agreement>
           <Button>Create Account</Button>
         </Form>
+        <Link className="rlink" to="/login">
+          <Linka>
+            <AccountBoxIcon style={{ marginRight: '10px' }} />
+            Have a Account
+          </Linka>
+        </Link>
       </Wrapper>
     </Container>
   );
